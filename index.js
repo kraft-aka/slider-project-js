@@ -15,6 +15,15 @@ sidebar.style.top = `-${(slidesCount - 1) * 100}vh`;
 upBtn.addEventListener("click", () => changeSlideUp());
 downBtn.addEventListener("click", () => changeSlideDown());
 
+// add functionality to keys
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowUp") {
+    changeSlideUp();
+  } else if (e.key === "ArrowDown") {
+    changeSlideDown();
+  }
+});
+
 // runs on button up
 function changeSlideUp() {
   activeSlideIndex++;
